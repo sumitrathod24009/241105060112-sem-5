@@ -1,0 +1,46 @@
+def hospital_chatbot():
+    print("--------------------------------------------------")
+    print("   Welcome to City General Hospital Chatbot!      ")
+    print("   (Type 'exit', 'quit', or 'bye' to stop)        ")
+    print("--------------------------------------------------\n")
+    print("Chatbot: Hello! How can I assist you with your healthcare needs today?")
+
+    while True:
+        # Get user input and convert to lowercase
+        user_input = input("You: ").lower().strip()
+
+        # Exit conditions
+        if user_input in ['exit', 'quit', 'bye']:
+            print("Chatbot: Thank you for contacting City General Hospital. Wishing you good health! Goodbye.")
+            break
+        
+        # Rule-based conditions
+        elif 'hello' in user_input or 'hi' in user_input or 'hey' in user_input:
+            print("Chatbot: Hello! How can I help you today?")
+            
+        elif 'hour' in user_input or 'visiting' in user_input or 'time' in user_input:
+            print("Chatbot: General visiting hours are from 10:00 AM to 8:00 PM daily. ICU visiting hours are strictly 4:00 PM to 6:00 PM.")
+            
+        elif 'emergency' in user_input or 'ambulance' in user_input or 'urgent' in user_input:
+            print("Chatbot: Our Emergency Department is open 24/7. If this is a medical emergency, please call 911 or our ambulance hotline at 555-0199 immediately.")
+            
+        elif 'appointment' in user_input or 'book' in user_input or 'doctor' in user_input:
+            print("Chatbot: You can book an appointment by calling 555-0100 or visiting our patient portal on our website. Would you like the link?")
+            
+        elif 'location' in user_input or 'where' in user_input or 'address' in user_input:
+            print("Chatbot: We are located at 456 Wellness Boulevard, right off Highway 9.")
+            
+        elif 'insurance' in user_input or 'billing' in user_input or 'pay' in user_input:
+            print("Chatbot: We accept most major insurance plans including Medicare and Medicaid. For specific billing inquiries, please contact our billing department at 555-0102.")
+            
+        elif 'department' in user_input or 'specialty' in user_input or 'ward' in user_input:
+            print("Chatbot: We have specialized departments for Cardiology, Neurology, Pediatrics, Orthopedics, and Maternity.")
+            
+        elif 'thank' in user_input:
+            print("Chatbot: You're very welcome! Let me know if you need anything else.")
+            
+        else:
+            print("Chatbot: I am a simple virtual assistant. You can ask me about visiting hours, emergencies, appointments, location, departments, or insurance.")
+
+if __name__ == "__main__":
+    hospital_chatbot()
